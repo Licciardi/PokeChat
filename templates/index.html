@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex Chat</title>
+ <link rel="stylesheet" href="{{ url_for('static', filename='pokedex-styles.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">PokeChat</h1>
+            <p class="subtitle">Converse com o e descubra informações sobre seus Pokémon favoritos</p>
+        </div>
+
+        <div class="main-grid">
+            <!-- Chat Area -->
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="header-lights">
+                        <div class="light light-white"></div>
+                        <div class="light light-yellow"></div>
+                        <div class="light light-green"></div>
+                    </div>
+                    <span class="chat-mode">CHAT MODE</span>
+                </div>
+
+                <div class="messages-area" id="messagesArea">
+                    <div class="message bot-message slide-in-left">
+                        <div class="bot-header">
+                            <div class="pokeball-icon">
+                                <div class="pokeball-center"></div>
+                            </div>
+                            <span class="bot-label">PokeChat</span>
+                        </div>
+                        <p>Bem-vindo ao PokeChat!.</p>
+                    </div>
+                </div>
+
+                <div class="input-area">
+                    <input 
+                        type="text" 
+                        id="messageInput" 
+                        class="message-input" 
+                        placeholder="Digite o nome de um Pokémon..."
+                    >
+                    <button id="sendButton" class="send-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Pokemon Info Panel -->
+            <div class="info-container">
+                <div class="info-header">
+                    <h2>POKÉMON INFO</h2>
+                </div>
+                <div class="info-content" id="infoContent">
+                    <div class="empty-state">
+                        <div class="pokeball-loading pokeball-spin">
+                            <div class="pokeball-center-large"></div>
+                        </div>
+                        <p>Procure um Pokémon no chat para ver suas informações aqui!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <script src="{{ url_for('static', filename='pokedex-script.js') }}"></script>
+
+</body>
+</html>
