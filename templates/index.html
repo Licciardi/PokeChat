@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokédex Chat</title>
- <link rel="stylesheet" href="{{ url_for('static', filename='pokedex-styles.css') }}">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='pokedex-styles.css') }}">
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1 class="title">PokeChat</h1>
-            <p class="subtitle">Converse com o e descubra informações sobre seus Pokémon favoritos</p>
+            <p class="subtitle">Converse, monte seu time e descubra estratégias para o competitivo.</p>
         </div>
 
         <div class="main-grid">
@@ -29,12 +28,10 @@
                 <div class="messages-area" id="messagesArea">
                     <div class="message bot-message slide-in-left">
                         <div class="bot-header">
-                            <div class="pokeball-icon">
-                                <div class="pokeball-center"></div>
-                            </div>
+                            <img src="{{ url_for('static', filename='assets/Poké_Ball_icon.png') }}" alt="Pokébola" class="pokeball-icon" />
                             <span class="bot-label">PokeChat</span>
                         </div>
-                        <p>Bem-vindo ao PokeChat!.</p>
+                        <p>Bem-vindo ao PokeChat!</p>
                     </div>
                 </div>
 
@@ -61,17 +58,16 @@
                 </div>
                 <div class="info-content" id="infoContent">
                     <div class="empty-state">
-                        <div class="pokeball-loading pokeball-spin">
-                            <div class="pokeball-center-large"></div>
+                       <img src="{{ url_for('static', filename='assets/Poké_Ball_icon.png') }}" alt="Pokébola" class="pokeball-loading pokeball-spin" />
+   <p>Procure um Pokémon no chat para ver suas informações aqui!</p>
                         </div>
-                        <p>Procure um Pokémon no chat para ver suas informações aqui!</p>
+                     
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-  <script src="{{ url_for('static', filename='pokedex-script.js') }}"></script>
-
+    <script src="{{ url_for('static', filename='pokedex-script.js') }}"></script>
 </body>
 </html>

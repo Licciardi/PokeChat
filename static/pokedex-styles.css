@@ -107,9 +107,16 @@ body {
 }
 
 .user-message {
-    margin-left: auto;
+    display: block;           /* mensagem ocupa apenas o necessário, mas linha inteira */
     background: #d32f2f;
     color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 1rem;
+    margin-left: auto;        /* empurra para a direita */
+    margin-bottom: 0.5rem;
+    max-width: fit-content;   /* largura se ajusta ao texto */
+    word-wrap: break-word;
+    clear: both;              /* garante que não fique ao lado do bot */
 }
 
 .bot-message {
@@ -117,6 +124,7 @@ body {
     background: white;
     border: 2px solid #424242;
     color: #1a1a1a;
+     max-width: fit-content; 
 }
 
 .bot-header {
@@ -127,10 +135,8 @@ body {
 }
 
 .pokeball-icon {
-    width: 1.25rem;
-    height: 1.25rem;
-    background: #d32f2f;
-    border: 2px solid #1a1a1a;
+    width: 2rem;
+    height: rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -232,18 +238,15 @@ body {
     text-align: center;
     color: #666;
 }
-
 .pokeball-loading {
-    width: 6rem;
-    height: 6rem;
-    background: #d32f2f;
-    border: 4px solid #424242;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
+    width: 9rem;
+    height: 9rem;
 }
+
+.pokeball-spin {
+    animation: pokeball-spin 2s linear infinite;
+}
+
 
 .pokeball-center-large {
     width: 2rem;
